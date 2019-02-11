@@ -1,12 +1,12 @@
 .\objects\lpc546xx_sct.o: ..\..\Libraries\drives\src\LPC546XX_sct.c
 .\objects\lpc546xx_sct.o: ..\..\Libraries\drives\common\common.h
-.\objects\lpc546xx_sct.o: D:\professional software\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-.\objects\lpc546xx_sct.o: D:\professional software\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\lpc546xx_sct.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\lpc546xx_sct.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\lpc546xx_sct.o: ..\..\Libraries\drives\common\SEEKFREE_PRINTF.h
 .\objects\lpc546xx_sct.o: ..\USER\inc\LPC546XX_config.h
 .\objects\lpc546xx_sct.o: ..\..\Libraries\startup\DeviceSupport\LPC54606.h
 .\objects\lpc546xx_sct.o: ..\..\Libraries\startup\CoreSupport\core_cm4.h
-.\objects\lpc546xx_sct.o: D:\professional software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\lpc546xx_sct.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\lpc546xx_sct.o: ..\..\Libraries\startup\CoreSupport\core_cmInstr.h
 .\objects\lpc546xx_sct.o: ..\..\Libraries\startup\CoreSupport\core_cmFunc.h
 .\objects\lpc546xx_sct.o: ..\..\Libraries\startup\CoreSupport\core_cm4_simd.h

@@ -1,13 +1,13 @@
 .\objects\isr.o: ..\USER\src\isr.c
 .\objects\isr.o: ..\..\Libraries\drives\inc\headfile.h
 .\objects\isr.o: ..\..\Libraries\drives\common\common.h
-.\objects\isr.o: D:\professional software\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-.\objects\isr.o: D:\professional software\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\isr.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\isr.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\isr.o: ..\..\Libraries\drives\common\SEEKFREE_PRINTF.h
 .\objects\isr.o: ..\USER\inc\LPC546XX_config.h
 .\objects\isr.o: ..\..\Libraries\startup\DeviceSupport\LPC54606.h
 .\objects\isr.o: ..\..\Libraries\startup\CoreSupport\core_cm4.h
-.\objects\isr.o: D:\professional software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\isr.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\isr.o: ..\..\Libraries\startup\CoreSupport\core_cmInstr.h
 .\objects\isr.o: ..\..\Libraries\startup\CoreSupport\core_cmFunc.h
 .\objects\isr.o: ..\..\Libraries\startup\CoreSupport\core_cm4_simd.h

@@ -305,6 +305,7 @@ void mt9v032_vsync(void)
 {
     PINT_IST_FLAG_CLEAR(MT9V032_VSYNC_PINT);    //清除标志位
     if(SCT_DMA0REQUEST_DRQ0_MASK & SCT0->DMA0REQUEST)   DMA_ABORT(MT9V032_DMA_CH);
+		if(mt9v032_finish_flag == 0)
     dma_reload_linked(MT9V032_DMA_CH, (void *)image[0], MT9V032_W*MT9V032_H);
 }
 
@@ -322,6 +323,7 @@ void mt9v032_dma(void)
     if(!DMA_STATUS(MT9V032_DMA_CH))//检查当前的DMA链接传输是否完毕
     {
         mt9v032_finish_flag = 1;//一副图像从采集开始到采集结束耗时3.8MS左右(50FPS、188*120分辨率)
+			  pint_disable_irq(MT9V032_VSYNC_PINT);
     }
 
 }

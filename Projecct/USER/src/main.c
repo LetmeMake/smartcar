@@ -33,16 +33,24 @@ int main(void)
 {   
     get_clk();
 
-    simiic_init();
-    icm20602_init();
+
+	  lcd_init();
+	  camera_init();
     uart_init(USART_0,460800,UART0_TX_A25,UART0_RX_A24);
+	  gpio_init(B2,GPI, 1, PULLUP);
     EnableInterrupts;
     while(1)
     {
-        get_icm20602_accdata();
-        get_icm20602_gyro();
-        data_conversion(icm_acc_x,icm_acc_y,icm_acc_z,icm_gyro_x,virtual_scope_data);
-        uart_putbuff(USART_0,virtual_scope_data,sizeof(virtual_scope_data));
+				if(mt9v032_finish_flag)
+				{			
+				lcd_displayimage032(*image,MT9V032_W,MT9V032_H);
+				pint_enable_irq(MT9V032_VSYNC_PINT);
+				lcd_showfloat(1,1,pit_get_ms(),10,0);
+				if(gpio_get(B2)==0)
+				mt9v032_finish_flag = 0;
+				pit_start();
+				}
+
         systick_delay_ms(10);
     }
 }
