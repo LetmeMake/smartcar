@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER\inc;..\USER\src;..\..\Libraries\startup\CoreSupport;..\..\Libraries\startup\DeviceSupport\MDK-ARM;..\..\Libraries\startup\DeviceSupport;..\..\Libraries\drives\inc;..\..\Libraries\drives\src;..\..\Libraries\seekfree;..\..\Libraries\drives\common;..\CODE</IncludePath>
+              <IncludePath>..\USER\inc;..\USER\src;..\..\Libraries\startup\CoreSupport;..\..\Libraries\startup\DeviceSupport\MDK-ARM;..\..\Libraries\startup\DeviceSupport;..\..\Libraries\drives\inc;..\..\Libraries\drives\src;..\..\Libraries\seekfree;..\..\Libraries\drives\common;..\CODE\MyCode</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -800,6 +800,31 @@
               <FileName>SEEKFREE_ICM20602.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\seekfree\SEEKFREE_ICM20602.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MyCode</GroupName>
+          <Files>
+            <File>
+              <FileName>angle_control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\MyCode\angle_control.c</FilePath>
+            </File>
+            <File>
+              <FileName>img_data_deal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\MyCode\img_data_deal.c</FilePath>
+            </File>
+            <File>
+              <FileName>mycode.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\MyCode\mycode.c</FilePath>
+            </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\MyCode\pid.c</FilePath>
             </File>
           </Files>
         </Group>

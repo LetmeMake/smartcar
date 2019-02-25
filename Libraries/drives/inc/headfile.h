@@ -60,5 +60,10 @@
 #include "SEEKFREE_L3G4200D.h"
 #include "SEEKFREE_ICM20602.h"
 
+//mycode
+#include "mycode.h"
+#include "img_data_deal.h"
+#include "angle_control.h"
+#include "pid.h"
 
 #endif

@@ -44,4 +44,8 @@
 .\objects\isr.o: ..\..\Libraries\seekfree\SEEKFREE_MMA8451.h
 .\objects\isr.o: ..\..\Libraries\seekfree\SEEKFREE_L3G4200D.h
 .\objects\isr.o: ..\..\Libraries\seekfree\SEEKFREE_ICM20602.h
+.\objects\isr.o: ..\CODE\MyCode\mycode.h
+.\objects\isr.o: ..\CODE\MyCode\img_data_deal.h
+.\objects\isr.o: ..\CODE\MyCode\angle_control.h
+.\objects\isr.o: ..\CODE\MyCode\pid.h
 .\objects\isr.o: ..\USER\inc\isr.h

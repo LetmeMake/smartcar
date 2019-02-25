@@ -37,6 +37,10 @@
 ".\objects\seekfree_oled.o"
 ".\objects\seekfree_virsco.o"
 ".\objects\seekfree_icm20602.o"
+".\objects\angle_control.o"
+".\objects\img_data_deal.o"
+".\objects\mycode.o"
+".\objects\pid.o"
 --strict --scatter ".\Objects\LPC546XX.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

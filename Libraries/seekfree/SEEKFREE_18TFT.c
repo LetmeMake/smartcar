@@ -573,12 +573,12 @@ void showimage(const unsigned char *p)
 //  Sample usage:              
 //  @note       图像的宽度如果超过液晶的宽度，则自动进行缩放显示。这样可以显示全视野
 //-------------------------------------------------------------------------------------------------------------------
-void lcd_displayimage032(uint8 *p, uint16 width, uint16 height) 
+void lcd_displayimage032(uint8 *p, uint16 width, uint16 height,uint8_t *mid,uint8 *left,uint8 *right) 
 {
     uint32 i,j;
                 
     uint16 color = 0;
-	uint16 temp = 0;
+	  uint16 temp = 0;
 	
     uint16 coord_x = 0;
     uint16 coord_y = 0;
@@ -601,6 +601,12 @@ void lcd_displayimage032(uint8 *p, uint16 width, uint16 height)
                 lcd_writedata_16bit(color); 
             }
         }
+				 for(j=0;j<coord_x;j++)
+				{
+							lcd_drawpoint(j,(*(mid+j))*coord_y/width,RED);
+							lcd_drawpoint(j,(*(left+j))*coord_y/width,GREEN);
+							lcd_drawpoint(j,(*(right+j))*coord_y/width,GREEN);
+				}
         
     }
     else//横屏
@@ -620,8 +626,79 @@ void lcd_displayimage032(uint8 *p, uint16 width, uint16 height)
                 lcd_writedata_16bit(color); 
             }
         }
+				for(j=0;j<coord_y;j++)
+				{
+							lcd_drawpoint((*(mid+j))*coord_x/width,j,RED);
+							lcd_drawpoint((*(left+j))*coord_x/width,j,GREEN);
+							lcd_drawpoint((*(right+j))*coord_x/width,j,GREEN);
+				}
     }
 }
+//-------------------------------------------------------------------------------------------------------------------
+//  @brief      总钻风(灰度摄像头)液晶显示函数2
+//  @param      *p     			图像数组地址
+//  @param      width     	    图像宽度
+//  @param      height     	    图像高度
+//  @return     void
+//  @since      v1.0
+//  Sample usage:              
+//  @note       图像的宽度如果超过液晶的宽度，则自动进行缩放显示。这样可以显示全视野
+//-------------------------------------------------------------------------------------------------------------------
+//void lcd_displayimage032_me(uint8 *p, uint16 width, uint16 height,uint8_t *mid,uint8 *left,uint8 *right) 
+//{
+//    uint32 i,j;
+//                
+//    uint16 color = 0;
+//	uint16 temp = 0;
+//	
+//    uint16 coord_x = 0;
+//    uint16 coord_y = 0;
+
+//    
+//    if(0==TFT_DISPLAY_DIR || 1==TFT_DISPLAY_DIR)//竖屏
+//    {
+//        coord_x = height>TFT_X_MAX?TFT_X_MAX:height;
+//        coord_y = width>TFT_Y_MAX?TFT_Y_MAX:width;
+
+//        for(j=0;j<coord_y;j++)
+//        {
+//            lcd_setregion(0,j,coord_x-1,j);
+//            for(i=0;i<coord_x;i++)
+//            {
+//                temp = *(p+i*width+j*width/coord_y);//读取像素点
+//                color=(0x001f&((temp)>>3))<<11;
+//                color=color|(((0x003f)&((temp)>>2))<<5);
+//                color=color|(0x001f&((temp)>>3));
+//                lcd_writedata_16bit(color); 
+//            }
+//        }
+//				 for(j=0;j<coord_x;j++)
+//				{
+//							lcd_drawpoint(j,(*(mid+j))*coord_y/width,RED);
+//							lcd_drawpoint(j,(*(left+j))*coord_y/width,GREEN);
+//							lcd_drawpoint(j,(*(right+j))*coord_y/width,GREEN);
+//				}
+//        
+//    }
+//    else//横屏
+//    {
+//        coord_x = width>TFT_X_MAX?TFT_X_MAX:width;
+//        coord_y = height>TFT_Y_MAX?TFT_Y_MAX:height;
+//        lcd_setregion(0,0,coord_x-1,coord_y-1);
+
+//        for(j=0;j<coord_y;j++)
+//        {
+//            for(i=0;i<coord_x;i++)
+//            {
+//                temp = *(p+j*width+i*width/coord_x);//读取像素点
+//                color=(0x001f&((temp)>>3))<<11;
+//                color=color|(((0x003f)&((temp)>>2))<<5);
+//                color=color|(0x001f&((temp)>>3));
+//                lcd_writedata_16bit(color); 
+//            }
+//        }
+//    }
+//}
 
 //-------------------------------------------------------------------------------------------------------------------
 //  @brief      小钻风(二值化摄像头)液晶显示函数

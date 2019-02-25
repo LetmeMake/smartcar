@@ -63,7 +63,9 @@ void FLEXCOMM0_DriverIRQHandler(void)
 void RIT_DriverIRQHandler(void)
 {
     PIT_FLAG_CLEAR;
-
+		Motor_Read();
+		Motor_PID_Control();
+		PID_Check();
     
 }
 

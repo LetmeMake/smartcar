@@ -109,7 +109,8 @@ void lcd_showuint16(uint16 x,uint16 y,uint16 dat);
 void lcd_showint32(uint16 x,uint16 y,int32 dat,uint8 num);
 void lcd_showfloat(uint16 x,uint16 y,double dat,uint8 num,uint8 pointnum);
 void showimage(const unsigned char *p);
-void lcd_displayimage032(uint8 *p, uint16 width, uint16 height);
+void lcd_displayimage032(uint8 *p, uint16 width, uint16 height,uint8_t *mid,uint8 *left,uint8 *right);
+//void lcd_displayimage032_me(uint8 *p, uint16 width, uint16 height,uint8_t *mid,uint8 *left,uint8 *right) 
 void lcd_displayimage7725(uint8 *p, uint16 width, uint16 height);
 void lcd_display_chinese(uint16 x, uint16 y, uint8 size, const uint8 *p, uint8 number, uint16 color);
 
