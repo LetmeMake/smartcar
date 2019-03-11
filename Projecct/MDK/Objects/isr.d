@@ -1,7 +1,8 @@
 .\objects\isr.o: ..\USER\src\isr.c
 .\objects\isr.o: ..\..\Libraries\drives\inc\headfile.h
-.\objects\isr.o: ..\..\Libraries\drives\common\common.h
+.\objects\isr.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\isr.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\isr.o: ..\..\Libraries\drives\common\common.h
 .\objects\isr.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\isr.o: ..\..\Libraries\drives\common\SEEKFREE_PRINTF.h
 .\objects\isr.o: ..\USER\inc\LPC546XX_config.h
@@ -48,4 +49,8 @@
 .\objects\isr.o: ..\CODE\MyCode\img_data_deal.h
 .\objects\isr.o: ..\CODE\MyCode\angle_control.h
 .\objects\isr.o: ..\CODE\MyCode\pid.h
+.\objects\isr.o: ..\CODE\MyCode\ImageCount.h
+.\objects\isr.o: ..\CODE\MyCode\DataClass.h
+.\objects\isr.o: ..\CODE\MyCode\Variable.h
+.\objects\isr.o: ..\CODE\MyCode\CommonFun.h
 .\objects\isr.o: ..\USER\inc\isr.h

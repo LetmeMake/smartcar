@@ -19,9 +19,19 @@
 #ifndef _headfile_h
 #define _headfile_h
 
+/*******************************************************************************
+* 说    明 * :	编译选择
+* 修改时间 * :	2016-6-19
+*******************************************************************************/
+#define _compile_ _RunCarSystem_		// 选择编译的程序
 
+#define _ExecutiveForceTest_ 1414		// 测试代码执行力
+#define _RunCarSystem_       1415		// 调车程序
+#define _MotorOrSteerTest_   1416		// 电机、舵机测试
+#define _RubTyreProgram_     1417		// 磨轮胎程序
 
-
+#include <stdbool.h>
+#include <math.h>
 
 
 
@@ -65,5 +75,9 @@
 #include "img_data_deal.h"
 #include "angle_control.h"
 #include "pid.h"
+#include "ImageCount.h"
+#include "DataClass.h"		// 数据类型定义
+#include "Variable.h"		// 变量定义
+#include "CommonFun.h"		// 常用功能
 
 #endif

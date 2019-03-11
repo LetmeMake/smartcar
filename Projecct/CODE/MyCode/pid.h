@@ -30,5 +30,5 @@ extern PID_IncTypeDef MOTOR_PID;
 	
 float PID_Loc(float ErrorValue, PID_LocTypeDef *PID);
 float PID_Inc(float SetValue, float ActualValue, PID_IncTypeDef *PID);
-
+void PID_Change(void);
 #endif

@@ -65,7 +65,7 @@ void RIT_DriverIRQHandler(void)
     PIT_FLAG_CLEAR;
 		Motor_Read();
 		Motor_PID_Control();
-		PID_Check();
+		PID_Change();
     
 }
 

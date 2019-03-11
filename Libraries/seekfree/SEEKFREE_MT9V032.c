@@ -40,7 +40,7 @@
 #include "LPC546XX_systick.h"
 #include "LPC546XX_pint.h"
 #include "SEEKFREE_MT9V032.h"
-
+#include "Variable.h"
 
 
 
@@ -279,7 +279,7 @@ void camera_init(void)
     DisableInterrupts;
     //初始化SCT模块用于接收PCLK信号并触发DMA
     sct_camera_dma(MT9V032_PCLK_SCT, MT9V032_PCLK, RISING);
-    dam_init_linked(MT9V032_DMA_CH, (void *)&MT9V032_DATAPORT, (void *)image[0], MT9V032_W*MT9V032_H);
+    dam_init_linked(MT9V032_DMA_CH, (void *)&MT9V032_DATAPORT, (void *)DataSave[0], MT9V032_W*MT9V032_H);
     pint_init(MT9V032_VSYNC_PINT,MT9V032_VSYNC_PIN,FALLING);
     
     
@@ -306,7 +306,7 @@ void mt9v032_vsync(void)
     PINT_IST_FLAG_CLEAR(MT9V032_VSYNC_PINT);    //清除标志位
     if(SCT_DMA0REQUEST_DRQ0_MASK & SCT0->DMA0REQUEST)   DMA_ABORT(MT9V032_DMA_CH);
 		if(mt9v032_finish_flag == 0)
-    dma_reload_linked(MT9V032_DMA_CH, (void *)image[0], MT9V032_W*MT9V032_H);
+    dma_reload_linked(MT9V032_DMA_CH, (void *)DataSave[0], MT9V032_W*MT9V032_H);
 }
 
 //-------------------------------------------------------------------------------------------------------------------

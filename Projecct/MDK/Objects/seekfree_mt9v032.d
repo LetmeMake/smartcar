@@ -20,3 +20,5 @@
 .\objects\seekfree_mt9v032.o: ..\..\Libraries\drives\inc\LPC546XX_systick.h
 .\objects\seekfree_mt9v032.o: ..\..\Libraries\drives\inc\LPC546XX_pint.h
 .\objects\seekfree_mt9v032.o: ..\..\Libraries\seekfree\SEEKFREE_MT9V032.h
+.\objects\seekfree_mt9v032.o: ..\CODE\MyCode\Variable.h
+.\objects\seekfree_mt9v032.o: ..\CODE\MyCode\DataClass.h

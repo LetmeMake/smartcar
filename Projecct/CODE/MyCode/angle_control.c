@@ -16,7 +16,7 @@ void Direct_control()
 //	mid_value = -middle_value;
 	
 	/*∑ΩœÚPDøÿ÷∆*/
-	Dir_out = (int)PID_Loc(-middle_value, &ANGLE_PID) + 770;
+	Dir_out = (int)PID_Loc(-middle_value, &ANGLE_PID) + 780;
 //	printf("mid_value £∫ %f  direction_value £∫ %d\n",mid_value,direction_value);
 //	last_mid_value = middle_value;	 
 	

@@ -113,6 +113,6 @@ void lcd_displayimage032(uint8 *p, uint16 width, uint16 height,uint8_t *mid,uint
 //void lcd_displayimage032_me(uint8 *p, uint16 width, uint16 height,uint8_t *mid,uint8 *left,uint8 *right) 
 void lcd_displayimage7725(uint8 *p, uint16 width, uint16 height);
 void lcd_display_chinese(uint16 x, uint16 y, uint8 size, const uint8 *p, uint8 number, uint16 color);
-
+void lcd_straight_line(uint8 h);
 
 #endif

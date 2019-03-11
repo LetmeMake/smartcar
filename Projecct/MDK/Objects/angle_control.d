@@ -1,7 +1,8 @@
 .\objects\angle_control.o: ..\CODE\MyCode\angle_control.c
 .\objects\angle_control.o: ..\..\Libraries\drives\inc\headfile.h
-.\objects\angle_control.o: ..\..\Libraries\drives\common\common.h
+.\objects\angle_control.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\angle_control.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\angle_control.o: ..\..\Libraries\drives\common\common.h
 .\objects\angle_control.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\angle_control.o: ..\..\Libraries\drives\common\SEEKFREE_PRINTF.h
 .\objects\angle_control.o: ..\USER\inc\LPC546XX_config.h
@@ -48,3 +49,7 @@
 .\objects\angle_control.o: ..\CODE\MyCode\img_data_deal.h
 .\objects\angle_control.o: ..\CODE\MyCode\angle_control.h
 .\objects\angle_control.o: ..\CODE\MyCode\pid.h
+.\objects\angle_control.o: ..\CODE\MyCode\ImageCount.h
+.\objects\angle_control.o: ..\CODE\MyCode\DataClass.h
+.\objects\angle_control.o: ..\CODE\MyCode\Variable.h
+.\objects\angle_control.o: ..\CODE\MyCode\CommonFun.h

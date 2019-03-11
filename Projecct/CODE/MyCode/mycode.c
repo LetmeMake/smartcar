@@ -19,6 +19,8 @@ void Motor_Read(void)
 		//lcd_showfloat(20,1,Speed_L_New,10,0);
 		ctimer_count_clean(TIMER0_COUNT1_A2);
     ctimer_count_clean(TIMER3_COUNT0_A4);
+		uart_putchar(USART_0,Speed_L_New);
+		//uart_putchar(USART_0,'/n');
 }
 
 void Motor_Init(void)
@@ -44,7 +46,7 @@ int32_t Motor_limit(int32_t PWM_out)
 	return PWM_out;
 }
 int32_t PWM_out_R,PWM_out_L;
-int target_value=20;
+int target_value=10;
 void Motor_PID_Control()
 {
 		uint32_t backleft ,frontleft,backright,frontright;

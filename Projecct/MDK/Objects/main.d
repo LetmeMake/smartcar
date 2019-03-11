@@ -1,7 +1,8 @@
 .\objects\main.o: ..\USER\src\main.c
 .\objects\main.o: ..\..\Libraries\drives\inc\headfile.h
-.\objects\main.o: ..\..\Libraries\drives\common\common.h
+.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\main.o: ..\..\Libraries\drives\common\common.h
 .\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\main.o: ..\..\Libraries\drives\common\SEEKFREE_PRINTF.h
 .\objects\main.o: ..\USER\inc\LPC546XX_config.h
@@ -48,3 +49,7 @@
 .\objects\main.o: ..\CODE\MyCode\img_data_deal.h
 .\objects\main.o: ..\CODE\MyCode\angle_control.h
 .\objects\main.o: ..\CODE\MyCode\pid.h
+.\objects\main.o: ..\CODE\MyCode\ImageCount.h
+.\objects\main.o: ..\CODE\MyCode\DataClass.h
+.\objects\main.o: ..\CODE\MyCode\Variable.h
+.\objects\main.o: ..\CODE\MyCode\CommonFun.h

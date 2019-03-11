@@ -826,6 +826,21 @@
               <FileType>1</FileType>
               <FilePath>..\CODE\MyCode\pid.c</FilePath>
             </File>
+            <File>
+              <FileName>ImageCount.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\MyCode\ImageCount.c</FilePath>
+            </File>
+            <File>
+              <FileName>CommonFun.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\MyCode\CommonFun.c</FilePath>
+            </File>
+            <File>
+              <FileName>variable.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\MyCode\variable.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

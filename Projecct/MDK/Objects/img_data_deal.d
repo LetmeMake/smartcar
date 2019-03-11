@@ -1,7 +1,8 @@
 .\objects\img_data_deal.o: ..\CODE\MyCode\img_data_deal.c
 .\objects\img_data_deal.o: ..\..\Libraries\drives\inc\headfile.h
-.\objects\img_data_deal.o: ..\..\Libraries\drives\common\common.h
+.\objects\img_data_deal.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\img_data_deal.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\img_data_deal.o: ..\..\Libraries\drives\common\common.h
 .\objects\img_data_deal.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\img_data_deal.o: ..\..\Libraries\drives\common\SEEKFREE_PRINTF.h
 .\objects\img_data_deal.o: ..\USER\inc\LPC546XX_config.h
@@ -48,3 +49,7 @@
 .\objects\img_data_deal.o: ..\CODE\MyCode\img_data_deal.h
 .\objects\img_data_deal.o: ..\CODE\MyCode\angle_control.h
 .\objects\img_data_deal.o: ..\CODE\MyCode\pid.h
+.\objects\img_data_deal.o: ..\CODE\MyCode\ImageCount.h
+.\objects\img_data_deal.o: ..\CODE\MyCode\DataClass.h
+.\objects\img_data_deal.o: ..\CODE\MyCode\Variable.h
+.\objects\img_data_deal.o: ..\CODE\MyCode\CommonFun.h

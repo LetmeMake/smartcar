@@ -273,7 +273,7 @@ void Find_Blackline(void)
           if(Right_Blackline[i]==0 && Left_Blackline[i] < MT9V032_W-1 && Left_Blackline[i] > Right_Blackline[i])      //右线丢失   
             {
 							if(i==MT9V032_H-5)
-								 Middle_line[i] = Left_Blackline[i] + ( MT9V032_W-1 - Left_Blackline[i])/2;
+								 Middle_line[i] = Left_Blackline[i]/2 ;
 							else
                  Middle_line[i] = Middle_line[i+1] + (Left_Blackline[i] - Left_Blackline[i+1]);               
 							if(Middle_line[i] < 1)
@@ -281,37 +281,38 @@ void Find_Blackline(void)
             }
             if(Left_Blackline[i]==MT9V032_W-1 && Right_Blackline[i] > 0 && Left_Blackline[i] > Right_Blackline[i])      //左线丢失
             {
-							if(i==MT9V032_H-1)
-								 Middle_line[i] = Right_Blackline[i] /2;
+							if(i==MT9V032_H-5)
+								 Middle_line[i] = Right_Blackline[i] + (MT9V032_W-Right_Blackline[i])/2;
 							else
                  Middle_line[i] = Middle_line[i+1] + (Right_Blackline[i] - Right_Blackline[i+1]);                 //60度    -(0.5471 * i - 44.5186)
 							if(Middle_line[i] > MT9V032_W-1)
 									Middle_line[i] = MT9V032_W-1;
             } 
+						
           
-            /******************** 十字处理 ***********************/
-        /*    if(Right_Blackline[i] == 0 && Left_Blackline[i]==79) 
-            {
-                add_cross_line(i);
-                //printf("2\n");
-         */                       
-                /******************** 单边补线 ***********************/
-               /*if(Right_Blackline[i]==0 && Left_Blackline[i] < 79 && Left_Blackline[i] > Right_Blackline[i])      //右线丢失    //(0.5271 * i + 0.8946 - 40)
-                {
-                        Middle_line[i] = Left_Blackline[i] + (0.5215 * i - 0.0442 - 35);               //60度    (0.5271 * i + 0.8946 - 40)
-                        if(Middle_line[i] < 1)
-                                Middle_line[i] = 1;
-                }
-                if(Left_Blackline[i]==79 && Right_Blackline[i] > 0 && Left_Blackline[i] > Right_Blackline[i])      //左线丢失
-                {
-                        Middle_line[i] = Right_Blackline[i] -(0.6122 * i -78.52 + 40);                 //60度    -(0.5471 * i - 44.5186)
-                        if(Middle_line[i] > 79)
-                                Middle_line[i] = 79;
-                } 
-                                        
-                Middle_line[i]=(Handle_R_line[i].x + Handle_L_line[i].x)/2;
-            } 		
-              */          
+//            /******************** 十字处理 ***********************/
+//           if(Right_Blackline[i] == 0 && Left_Blackline[i]==187) 
+//            {
+//                add_cross_line(i);
+//                //printf("2\n");
+//                               
+//                /******************** 单边补线 ***********************/
+//              if(Right_Blackline[i]==0 && Left_Blackline[i] < 187 && Left_Blackline[i] > Right_Blackline[i])      //右线丢失    //(0.5271 * i + 0.8946 - 40)
+//                {
+//                        Middle_line[i] = Left_Blackline[i] + (0.5215 * i - 0.0442 - 35);               //60度    (0.5271 * i + 0.8946 - 40)
+//                        if(Middle_line[i] < 1)
+//                                Middle_line[i] = 1;
+//                }
+//                if(Left_Blackline[i]==187 && Right_Blackline[i] > 0 && Left_Blackline[i] > Right_Blackline[i])      //左线丢失
+//                {
+//                        Middle_line[i] = Right_Blackline[i] -(0.6122 * i -78.52 + 40);                 //60度    -(0.5471 * i - 44.5186)
+//                        if(Middle_line[i] > 79)
+//                                Middle_line[i] = 79;
+//                } 
+//                                        
+//                Middle_line[i]=(Left_Blackline[i]+ Right_Blackline[i])/2; 
+//            } 		
+//                       
             /******************** 圆环处理 ***********************/
 //            if(error_row[i] == 2)
 //                pass_round(i);
@@ -343,27 +344,126 @@ void Find_Blackline(void)
 				row_error[1]=0;
 				row_error[2]=0;
 				row_error[3]=0;
-				for(i=55;i>10;i--)
+				for(i=110;i>15;i--)//下
 				{
-					
-					if(Right_Blackline[i-1]-Right_Blackline[i]>20&&Right_Blackline[i-2]-Right_Blackline[i]>20)
-						row_error[0]=i;
-					if(Right_Blackline[i+1]-Right_Blackline[i]>20&&Right_Blackline[i+2]-Right_Blackline[i]>20)
+
+					if(Right_Blackline[i]-Right_Blackline[i-1]>10&&Right_Blackline[i]-Right_Blackline[i-2]>10&&row_error[1]==0)
 						row_error[1]=i;
-					if(Left_Blackline[i]-Left_Blackline[i-1]>20&&Left_Blackline[i]-Left_Blackline[i-2]>20)
-						row_error[2]=i;
-					if(Left_Blackline[i]-Left_Blackline[i+1]>20&&Left_Blackline[i]-Left_Blackline[i+2]>20)
+
+					if(Left_Blackline[i-1]-Left_Blackline[i]>10&&Left_Blackline[i-2]-Left_Blackline[i]>10&&row_error[3]==0)
 						row_error[3]=i;
+					
+					if(row_error[1]!=0 && row_error[3]!=0)
+						break;
 				}
-				row_error[4]=fmin(row_error[0],row_error[2]);
-				row_error[5]=fmin(row_error[1],row_error[3]);
-				for(i=row_error[4]+3;i<row_error[5]-3;i++)
-				Middle_line[i]=(Middle_line[row_error[4]+4]+Middle_line[row_error[5]-4])/2;//Right_Blackline[row_error[0]]+(i-row_error[0])/(row_error[0]-row_error[1])*(Right_Blackline[row_error[1]]-Right_Blackline[row_error[0]]);
+				for(i=110;i>30;i--)//上
+				{
+					if(Right_Blackline[i]-Right_Blackline[i+1]>10&&Right_Blackline[i]-Right_Blackline[i+2]>10&&row_error[0]==0)
+						row_error[0]=i;
+
+					if(Left_Blackline[i+1]-Left_Blackline[i]>10&&Left_Blackline[i+2]-Left_Blackline[i]>10&&row_error[2]==0)
+						row_error[2]=i;
+					
+					if(row_error[0]!=0 && row_error[2]!=0)
+						break;
+				}
+//				if(row_error[0]>0&&row_error[1]>0&&row_error[2]>0&&row_error[3]>0)
+//				{
+//				row_error[4]=fmin(row_error[0],row_error[2])-3;
+//				row_error[5]=fmax(row_error[1],row_error[3])+3;
+//				for(i=row_error[4];i<=row_error[5];i++)
+//					{
+//				Right_Blackline[i]=Right_Blackline[row_error[5]]+(i-row_error[4])/(row_error[5]-row_error[4])*(Right_Blackline[row_error[4]]-Right_Blackline[row_error[5]]);
+//				Left_Blackline[i]=Left_Blackline[row_error[5]]-(i-row_error[4])*(Left_Blackline[row_error[5]]-Left_Blackline[row_error[4]])/(row_error[5]-row_error[4]);
+//				Middle_line[i]=(Middle_line[row_error[4]]-Middle_line[row_error[5]])/(row_error[5]-row_error[4])*(i-row_error[4])+Middle_line[row_error[5]];	
+//					}
+//			}
+				if(row_error[1]>0&&row_error[0]>0)
+					for(i=row_error[1];i<row_error[0];i--)
+				{
+					Right_Blackline[i]=Right_Blackline[row_error[1]];
+					//if(Left_Blackline[i]==0)
+						
+				}
+			  if(row_error[3]>0&&row_error[2]>0)
+					for(i=row_error[3];i<row_error[2];i--)
+				{
+					Right_Blackline[i]=Right_Blackline[row_error[3]];
+					//if(Left_Blackline[i]==0)
+						
+				}
+				//Right_Blackline[row_error[0]]+(i-row_error[0])/(row_error[0]-row_error[1])*(Right_Blackline[row_error[1]]-Right_Blackline[row_error[0]]);
 		
-    }				    
+ 				    
+}
 }
 
+//void add_cross_line(int i)
+//{
+//    float a_left,b_left;
+//    int a_right,b_right;
+//    float sum_a_left = 0,sum_b_left = 0;
+//    float sum_a_right,sum_b_right;
+//    Site_Lcd_t line_use;
+//    int n,m;
+//	
+//    for(n=0;n<1;n++)
+//    {
+//        for(m=0;m<10;m++)
+//        {
+//            if(error_row[55+n+m] != 2)
+//            {
+//                line_use.x = 40;
+//                line_use.y = 55+n+m;
+//                LCD_cross(line_use,80,GREEN);
+////                m = 0;
+//                break;
+//            }
+//        }
 
+//        a_left=((n+10)-(55+n+m))/(Handle_L_line[n+10].x-Handle_L_line[55+n+m].x);
+//        a_right=((n+10)-(55+n+m))/(Handle_R_line[n+10].x-Handle_R_line[55+n+m].x);
+//    
+//        b_left=-((55+n+m)-a_left*Left_Blackline[55+n+m]);
+//        b_right=(55+n+m)-a_right*Right_Blackline[55+n+m];
+//        m = 0;
+//        sum_a_left = a_left + sum_a_left;
+//        sum_b_left = b_left + sum_b_left;
+//        sum_a_right = a_right + sum_a_right;
+//        sum_b_right = b_right + sum_a_right;
+
+//    }
+//    sum_a_left = sum_a_left/n;
+//    sum_b_left = sum_b_left/n;
+
+//    sum_a_right = sum_a_right/n;
+//    sum_b_right = sum_b_right/n;
+//		
+//    if((Right_Blackline[10] == 0 && Right_Blackline[11] == 0 && Right_Blackline[12] == 0) || (Left_Blackline[10] == 79 && Left_Blackline[11] == 79 && Left_Blackline[12] == 79))
+//    {
+//        if(sum_a_left != 0)
+//        {
+//            Left_Blackline[i] = (i+sum_b_left)/sum_a_left;
+//        } 
+//        if(Left_Blackline[i] > 79)
+//            Left_Blackline[i] = 79;
+//        Handle_L_line[i].x = Left_Blackline[i];
+//        
+//        if(sum_a_right != 0)
+//        {
+//            Right_Blackline[i] = (i-sum_b_right)/sum_a_right;
+//        }
+//         
+//        if(Right_Blackline[i] <0)
+//            Right_Blackline[i] = 0;
+
+//        if(Left_Blackline[i] > 79)
+//            Left_Blackline[i] = 79;
+//        
+//        Handle_R_line[i].x = Right_Blackline[i];
+//        Handle_L_line[i].x = Left_Blackline[i];   
+//    }
+//}
 
 
 
@@ -380,16 +480,16 @@ void Get_Weighted_Average(void)
 	middle_value=0;
 	effective_line=0;
 	
-	for(i=5;i<26;i++)
+	for(i=30;i<110;i++)
    {
-        if(effective_line<26)
+        if(effective_line<20)
         {
-           middle_value += (MT9V032_W/2-Middle_line[i])*0.08;  
+           middle_value += (MT9V032_W/2-Middle_line[i])*0.5;  
                      
         }	
-        if(effective_line>5 && effective_line<15)
+        if(effective_line>20 && effective_line<40)
         { 
-           middle_value += (MT9V032_W/2-Middle_line[i])*0.4; 
+           middle_value += (MT9V032_W/2-Middle_line[i])*0.55; 
         }  
         effective_line++; 
     }		 

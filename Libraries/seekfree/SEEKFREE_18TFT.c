@@ -561,7 +561,13 @@ void showimage(const unsigned char *p)
 		 }
 	}		
 }
-
+//
+void lcd_straight_line(uint8 h)
+{
+	int i;
+	for(i=0;i<TFT_X_MAX;i++)
+	lcd_drawpoint(i,h,BLUE);
+}
 
 //-------------------------------------------------------------------------------------------------------------------
 //  @brief      总钻风(灰度摄像头)液晶显示函数
