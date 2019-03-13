@@ -79,5 +79,6 @@
 #include "DataClass.h"		// 数据类型定义
 #include "Variable.h"		// 变量定义
 #include "CommonFun.h"		// 常用功能
+#include "control.h"
 
 #endif

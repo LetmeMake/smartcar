@@ -53,3 +53,4 @@
 .\objects\mycode.o: ..\CODE\MyCode\DataClass.h
 .\objects\mycode.o: ..\CODE\MyCode\Variable.h
 .\objects\mycode.o: ..\CODE\MyCode\CommonFun.h
+.\objects\mycode.o: ..\CODE\MyCode\control.h

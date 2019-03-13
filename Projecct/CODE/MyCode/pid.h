@@ -25,7 +25,8 @@
 	 float LocSum; 									 //累计积分位置
 	}PID_LocTypeDef;
 extern PID_LocTypeDef ANGLE_PID;
-extern PID_IncTypeDef MOTOR_PID;
+extern PID_IncTypeDef MOTOR_PID_L;
+extern PID_IncTypeDef MOTOR_PID_R;
 	
 	
 float PID_Loc(float ErrorValue, PID_LocTypeDef *PID);

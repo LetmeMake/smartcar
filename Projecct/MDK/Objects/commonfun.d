@@ -53,3 +53,4 @@
 .\objects\commonfun.o: ..\CODE\MyCode\DataClass.h
 .\objects\commonfun.o: ..\CODE\MyCode\Variable.h
 .\objects\commonfun.o: ..\CODE\MyCode\CommonFun.h
+.\objects\commonfun.o: ..\CODE\MyCode\control.h

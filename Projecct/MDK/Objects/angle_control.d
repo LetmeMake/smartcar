@@ -53,3 +53,4 @@
 .\objects\angle_control.o: ..\CODE\MyCode\DataClass.h
 .\objects\angle_control.o: ..\CODE\MyCode\Variable.h
 .\objects\angle_control.o: ..\CODE\MyCode\CommonFun.h
+.\objects\angle_control.o: ..\CODE\MyCode\control.h

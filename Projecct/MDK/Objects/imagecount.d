@@ -53,3 +53,4 @@
 .\objects\imagecount.o: ..\CODE\MyCode\DataClass.h
 .\objects\imagecount.o: ..\CODE\MyCode\Variable.h
 .\objects\imagecount.o: ..\CODE\MyCode\CommonFun.h
+.\objects\imagecount.o: ..\CODE\MyCode\control.h

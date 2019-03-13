@@ -841,6 +841,11 @@
               <FileType>1</FileType>
               <FilePath>..\CODE\MyCode\variable.c</FilePath>
             </File>
+            <File>
+              <FileName>control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\MyCode\control.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

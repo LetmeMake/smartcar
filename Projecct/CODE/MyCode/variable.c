@@ -46,8 +46,8 @@ _INT8U_ TestElement = _Cross_;		// 测试赛道元素
 *******************************************************************************/
 _INT16S_ SteerAngle = 0;			// 舵机转向控制(相对中心值)
 
-_INT16U_ Steer_AN_KP = 300;			// PD控制参数
-_INT8U_   Steer_AN_KD = 30;
+_INT16U_ 	Steer_AN_KP = 150;			// PD控制参数300
+_INT8U_   Steer_AN_KD = 30;				//30
 
 
 

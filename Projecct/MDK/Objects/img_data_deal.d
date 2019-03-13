@@ -53,3 +53,4 @@
 .\objects\img_data_deal.o: ..\CODE\MyCode\DataClass.h
 .\objects\img_data_deal.o: ..\CODE\MyCode\Variable.h
 .\objects\img_data_deal.o: ..\CODE\MyCode\CommonFun.h
+.\objects\img_data_deal.o: ..\CODE\MyCode\control.h

@@ -17,11 +17,11 @@
 #define _LostMax_         50		// 丢线最大数
 
 #define _LineArea_       112		// 计算面积的行数
-#define _AreaRangeMax_    70		// 梯形长底面半径
+#define _AreaRangeMax_    92//70		// 梯形长底面半径
 #define _AreaRangeMin_    15		// 梯形短底面半径
 
 #define _WhiteMax_       115		// 白点最大值
-#define _WhiteMin_        50		// 白点最小值
+#define _WhiteMin_        100		// 白点最小值50
 #define _Contrast_        15		// 对比度阀值
 
 #define _LengthRange_     15		// 计算最远点半径
@@ -41,8 +41,8 @@
 *******************************************************************************/
 #define _SpeedParameter_   100		// 电机理想速度参数
 
-#define _SteerDutyMax_     950		// 舵机左右转角控制
-#define _SteerCenter_     4350		// 舵机中心值
+#define _SteerDutyMax_    100// 950		// 舵机左右转角控制
+#define _SteerCenter_     780// 4350		// 舵机中心值
 
 #define _MotorDutyMax_    1000		// 电机正转占空比限制
 #define _MotorDutyMin_    -500		// 电机反转占空比限制

@@ -16,10 +16,11 @@ void Motor_Read(void)
 	  Speed_R_New = ctimer_count_read(TIMER3_COUNT0_A4);
 		else
 		Speed_R_New =		0;
+		uart_write(Speed_L_New,Speed_R_New,0,0);
 		//lcd_showfloat(20,1,Speed_L_New,10,0);
 		ctimer_count_clean(TIMER0_COUNT1_A2);
     ctimer_count_clean(TIMER3_COUNT0_A4);
-		uart_putchar(USART_0,Speed_L_New);
+		//uart_putchar(USART_0,Speed_L_New);
 		//uart_putchar(USART_0,'/n');
 }
 
@@ -46,14 +47,14 @@ int32_t Motor_limit(int32_t PWM_out)
 	return PWM_out;
 }
 int32_t PWM_out_R,PWM_out_L;
-int target_value=10;
+int target_value=55;
 void Motor_PID_Control()
 {
 		uint32_t backleft ,frontleft,backright,frontright;
     backleft = frontleft = backright = frontright =0;
 		
-		PWM_out_R =PWM_out_R+PID_Inc(target_value,Speed_R_New,&MOTOR_PID);       //增量型PID需要三个差速
-    PWM_out_L =PWM_out_L+PID_Inc(target_value,Speed_L_New,&MOTOR_PID);       //增量型PID需要三个差速
+		PWM_out_R =PWM_out_R+PID_Inc(target_value,Speed_R_New,&MOTOR_PID_R);       //增量型PID需要三个差速
+    PWM_out_L =PWM_out_L+PID_Inc(target_value,Speed_L_New,&MOTOR_PID_L);       //增量型PID需要三个差速
 	  
 		PWM_out_L= Motor_limit(PWM_out_L);
 		PWM_out_R= Motor_limit(PWM_out_R);
@@ -86,32 +87,32 @@ void PID_Check()
 	{
 		target_value = 70;
 		count = 0;
-		mrt_start(MRT_CH0);
+		//mrt_start(MRT_CH0);
 		flag_1=0;
 	}
-	if(Speed_R_New==70&&flag_1==0)
-	{
-		inc_time=mrt_get_ms(MRT_CH0);
-		min=max=70;
-		flag_1=1;
-	}
+//	if(Speed_R_New==70&&flag_1==0)
+//	{
+//		inc_time=mrt_get_ms(MRT_CH0);
+//		min=max=70;
+//		flag_1=1;
+//	}
 	if(count==200)
 	{
 		target_value = 20;
-		mrt_start(MRT_CH0);
+		//mrt_start(MRT_CH0);
 		flag_2=0;
 	}
-	if(Speed_R_New==20&&flag_2==0)
-	{
-		inc_time=mrt_get_ms(MRT_CH0);
-		min=max=20;
-		flag_2=1;
-	}
-	if(flag_1==1&&flag_2==1)
-	{
-		if(Speed_R_New<min) min=Speed_R_New;
-		if(Speed_R_New>max) max=Speed_R_New;
-	}
+//	if(Speed_R_New==20&&flag_2==0)
+//	{
+//		inc_time=mrt_get_ms(MRT_CH0);
+//		min=max=20;
+//		flag_2=1;
+//	}
+//	if(flag_1==1&&flag_2==1)
+//	{
+//		if(Speed_R_New<min) min=Speed_R_New;
+//		if(Speed_R_New>max) max=Speed_R_New;
+//	}
 	
 }
 

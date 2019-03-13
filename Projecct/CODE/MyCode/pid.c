@@ -6,7 +6,8 @@
 //5.5/4.12		
 PID_LocTypeDef ANGLE_PID = {7.5,0,0,0,0,0,0};
 
-PID_IncTypeDef MOTOR_PID = {40,0,4,0,0,0} ;
+PID_IncTypeDef MOTOR_PID_R = {80,12,15,0,0,0} ;
+PID_IncTypeDef MOTOR_PID_L = {80,12,15,0,0,0} ;
 /************************************************
 函数名称 ： PI_Inc
 功    能 ： PI增量(Increment)计算
@@ -14,14 +15,19 @@ PID_IncTypeDef MOTOR_PID = {40,0,4,0,0,0} ;
 						ActualValue --- 实际值(反馈值)
 					  PID ----------- PID数据结构
 返 回 值 ： PIDInc -------- 本次PID增量(+/-)
-作		者 ： strongerHuang
+作		者 ： JinKai
+//	Car_PWM += (
+//					s_kp * (SpeedBias[0] - SpeedBias[1])                +		// P 比例
+//					s_ki *  SpeedBias[0]                                +		// I 积分
+//					s_kd * (SpeedBias[0] - 2*SpeedBias[1] + SpeedBias[2])		// D 微分
+//			   )/5;
 *************************************************/
 float PID_Inc(float SetValue, float ActualValue, PID_IncTypeDef *PID)
 {
  float PIDInc; //增量
  
  PID->Ek = SetValue - ActualValue;
-PIDInc = (PID->Kp * PID->Ek) - (PID->Ki * PID->Ek1) + (PID->Kd * PID->Ek2);
+ PIDInc = (PID->Kp *(PID->Ek-PID->Ek1)) + (PID->Ki * PID->Ek) + (PID->Kd * (PID->Ek-2*PID->Ek1+PID->Ek2));
  //PIDInc = (PID->Kp * PID->Ek) - (PID->Ki * PID->Ek1);			//仅保留PI计算
 
  PID->Ek2 = PID->Ek1;
@@ -53,15 +59,23 @@ float PID_Loc(float ErrorValue, PID_LocTypeDef *PID)
 }
 void PID_Change(void)
 {
-		if(gpio_get(B2)==0)
-			ANGLE_PID.Kp+=0.001f;
-		if(gpio_get(B3)==0)
-			ANGLE_PID.Kp-=0.001f;
-		if(gpio_get(B23)==0)
-			ANGLE_PID.Kd+=0.001f;
-		if(gpio_get(B1)==0)
-			ANGLE_PID.Kd-=0.001f;
+//		if(gpio_get(B2)==0)
+//			ANGLE_PID.Kp+=0.001f;
+//		if(gpio_get(B3)==0)
+//			ANGLE_PID.Kp-=0.001f;
+//		if(gpio_get(B23)==0)
+//			ANGLE_PID.Kd+=0.001f;
+//		if(gpio_get(B1)==0)
+//			ANGLE_PID.Kd-=0.001f;
 		//lcd_showfloat(10,10,ANGLE_PID.Kp,2,3);
 		//lcd_showfloat(40,10,ANGLE_PID.Kd,2,3);
+	if(gpio_get(B2)==0)
+			Steer_AN_KP+=1;
+		if(gpio_get(B3)==0)
+			Steer_AN_KP-=1;
+		if(gpio_get(B23)==0)
+			Steer_AN_KD+=1;
+		if(gpio_get(B1)==0)
+			Steer_AN_KD-=1;
 }
 
