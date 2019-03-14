@@ -39,11 +39,12 @@ void FLEXCOMM0_DriverIRQHandler(void)
 {
     vuint32 flag;
     flag = UART0_FIFO_FLAG;
-    
+    uint8 receive;
     
     if(flag & USART_FIFOINTSTAT_RXLVL_MASK)//接收FIFO达到设定水平（库默认设定水平 当接收FIFO有一个数据的时候触发中断）
     {
-        //uart_query(USART_0,&ddf[fg]);读取数据
+        if(uart_query(USART_0,&receive))//读取数据
+				Parameter_Adjust(receive);
     }
     
     if(flag & USART_FIFOINTSTAT_TXLVL_MASK)//发送FIFO达到设定水平（库默认设定水平 当发送FIFO为空的时候触发中断）

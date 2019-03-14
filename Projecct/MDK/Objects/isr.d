@@ -54,4 +54,5 @@
 .\objects\isr.o: ..\CODE\MyCode\Variable.h
 .\objects\isr.o: ..\CODE\MyCode\CommonFun.h
 .\objects\isr.o: ..\CODE\MyCode\control.h
+.\objects\isr.o: ..\CODE\MyCode\bluetooth.h
 .\objects\isr.o: ..\USER\inc\isr.h

@@ -54,3 +54,4 @@
 .\objects\commonfun.o: ..\CODE\MyCode\Variable.h
 .\objects\commonfun.o: ..\CODE\MyCode\CommonFun.h
 .\objects\commonfun.o: ..\CODE\MyCode\control.h
+.\objects\commonfun.o: ..\CODE\MyCode\bluetooth.h

@@ -80,5 +80,6 @@
 #include "Variable.h"		// 变量定义
 #include "CommonFun.h"		// 常用功能
 #include "control.h"
+#include "bluetooth.h"
 
 #endif

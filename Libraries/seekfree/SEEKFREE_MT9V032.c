@@ -170,7 +170,7 @@ uint16 get_version(void)
 //-------------------------------------------------------------------------------------------------------------------
 uint16 set_exposure_time(uint16 light)
 {
-	uint16 temp;
+		uint16 temp;
     uint8  send_buffer[4];
 
     send_buffer[0] = 0xA5;

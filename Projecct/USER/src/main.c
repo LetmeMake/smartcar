@@ -45,8 +45,11 @@ int main(void)
 		gpio_init(A5,GPI, 1, PULLUP);
 		Standard();
 	  lcd_init();
-	  camera_init();
-    uart_init(USART_0,115200,UART0_TX_A25,UART0_RX_A24);
+	  //camera_init();
+	  adc_init(ADC_CH0_A10);
+		adc_init(ADC_CH5_A31);
+    //uart_init(USART_0,115200,UART0_TX_A25,UART0_RX_A24);
+	  uart_rx_irq(USART_0,1);
 	  	//°´¼ü
 		gpio_init(B1,GPI, 1, PULLUP);
 		gpio_init(B2,GPI, 1, PULLUP);
@@ -68,7 +71,7 @@ int main(void)
 				download();//1ms×óÓÒ
 				
 				//if(gpio_get(B2)==0)
-//				lcd_displayimage032(*ImageData,MT9V032_W-2,MT9V032_H,MidcourtLine,LeftTrapezoid,RightTrapezoid);	//71ms×óÓÒ			
+				lcd_displayimage032(*ImageData,MT9V032_W-2,MT9V032_H,MidcourtLine,LeftConfine,RightConfine);	//71ms×óÓÒ			
 				mt9v032_finish_flag = 0;
 				//pit_start();
 				CarProtect();
@@ -86,12 +89,13 @@ int main(void)
 				CrossFillingLine();				// Ê®×Ö²¹Ïß
 				CouBlackArea();	
 					
-				SteerControl();
+				//SteerControl();
 				
 				lcd_straight_line(112);
 				lcd_straight_line(RightFirstRow);
-			lcd_showfloat(0,0,Steer_AN_KP,4,3);
-			lcd_showfloat(0,1,Steer_AN_KD,3,3);
+				
+				lcd_showfloat(0,0,Steer_AN_KP,4,3);
+				lcd_showfloat(0,1,Steer_AN_KD,3,3);
 //				
 				}
 				//Get_Weighted_Average();

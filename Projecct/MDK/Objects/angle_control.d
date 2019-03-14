@@ -54,3 +54,4 @@
 .\objects\angle_control.o: ..\CODE\MyCode\Variable.h
 .\objects\angle_control.o: ..\CODE\MyCode\CommonFun.h
 .\objects\angle_control.o: ..\CODE\MyCode\control.h
+.\objects\angle_control.o: ..\CODE\MyCode\bluetooth.h

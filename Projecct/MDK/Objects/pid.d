@@ -54,3 +54,4 @@
 .\objects\pid.o: ..\CODE\MyCode\Variable.h
 .\objects\pid.o: ..\CODE\MyCode\CommonFun.h
 .\objects\pid.o: ..\CODE\MyCode\control.h
+.\objects\pid.o: ..\CODE\MyCode\bluetooth.h

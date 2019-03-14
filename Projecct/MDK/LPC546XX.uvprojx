@@ -846,6 +846,11 @@
               <FileType>1</FileType>
               <FilePath>..\CODE\MyCode\control.c</FilePath>
             </File>
+            <File>
+              <FileName>bluetooth.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\MyCode\bluetooth.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

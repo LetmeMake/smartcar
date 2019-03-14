@@ -54,3 +54,4 @@
 .\objects\imagecount.o: ..\CODE\MyCode\Variable.h
 .\objects\imagecount.o: ..\CODE\MyCode\CommonFun.h
 .\objects\imagecount.o: ..\CODE\MyCode\control.h
+.\objects\imagecount.o: ..\CODE\MyCode\bluetooth.h
