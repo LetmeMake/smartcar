@@ -46,7 +46,11 @@
 ".\objects\variable.o"
 ".\objects\control.o"
 <<<<<<< HEAD
+<<<<<<< HEAD
 ".\objects\inductance.o"
+=======
+".\objects\bluetooth.o"
+>>>>>>> d505da9f6599f2df4878ab522962f87b6abe5125
 =======
 ".\objects\bluetooth.o"
 >>>>>>> d505da9f6599f2df4878ab522962f87b6abe5125

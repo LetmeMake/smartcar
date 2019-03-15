@@ -55,8 +55,12 @@
 .\objects\commonfun.o: ..\CODE\MyCode\CommonFun.h
 .\objects\commonfun.o: ..\CODE\MyCode\control.h
 <<<<<<< HEAD
+<<<<<<< HEAD
 .\objects\commonfun.o: ..\CODE\MyCode\inductance.h
 .\objects\commonfun.o: ..\..\Libraries\drives\inc\headfile.h
+=======
+.\objects\commonfun.o: ..\CODE\MyCode\bluetooth.h
+>>>>>>> d505da9f6599f2df4878ab522962f87b6abe5125
 =======
 .\objects\commonfun.o: ..\CODE\MyCode\bluetooth.h
 >>>>>>> d505da9f6599f2df4878ab522962f87b6abe5125

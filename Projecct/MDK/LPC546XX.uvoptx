@@ -1361,8 +1361,13 @@
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <PathWithFileName>..\CODE\MyCode\inductance.c</PathWithFileName>
       <FilenameWithoutPath>inductance.c</FilenameWithoutPath>
+=======
+      <PathWithFileName>..\CODE\MyCode\bluetooth.c</PathWithFileName>
+      <FilenameWithoutPath>bluetooth.c</FilenameWithoutPath>
+>>>>>>> d505da9f6599f2df4878ab522962f87b6abe5125
 =======
       <PathWithFileName>..\CODE\MyCode\bluetooth.c</PathWithFileName>
       <FilenameWithoutPath>bluetooth.c</FilenameWithoutPath>
