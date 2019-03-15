@@ -54,6 +54,10 @@
 .\objects\isr.o: ..\CODE\MyCode\Variable.h
 .\objects\isr.o: ..\CODE\MyCode\CommonFun.h
 .\objects\isr.o: ..\CODE\MyCode\control.h
+<<<<<<< HEAD
 .\objects\isr.o: ..\CODE\MyCode\inductance.h
 .\objects\isr.o: ..\..\Libraries\drives\inc\headfile.h
+=======
+.\objects\isr.o: ..\CODE\MyCode\bluetooth.h
+>>>>>>> d505da9f6599f2df4878ab522962f87b6abe5125
 .\objects\isr.o: ..\USER\inc\isr.h

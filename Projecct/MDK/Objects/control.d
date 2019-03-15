@@ -54,5 +54,9 @@
 .\objects\control.o: ..\CODE\MyCode\Variable.h
 .\objects\control.o: ..\CODE\MyCode\CommonFun.h
 .\objects\control.o: ..\CODE\MyCode\control.h
+<<<<<<< HEAD
 .\objects\control.o: ..\CODE\MyCode\inductance.h
 .\objects\control.o: ..\..\Libraries\drives\inc\headfile.h
+=======
+.\objects\control.o: ..\CODE\MyCode\bluetooth.h
+>>>>>>> d505da9f6599f2df4878ab522962f87b6abe5125

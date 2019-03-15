@@ -54,5 +54,9 @@
 .\objects\imagecount.o: ..\CODE\MyCode\Variable.h
 .\objects\imagecount.o: ..\CODE\MyCode\CommonFun.h
 .\objects\imagecount.o: ..\CODE\MyCode\control.h
+<<<<<<< HEAD
 .\objects\imagecount.o: ..\CODE\MyCode\inductance.h
 .\objects\imagecount.o: ..\..\Libraries\drives\inc\headfile.h
+=======
+.\objects\imagecount.o: ..\CODE\MyCode\bluetooth.h
+>>>>>>> d505da9f6599f2df4878ab522962f87b6abe5125

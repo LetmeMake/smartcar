@@ -848,9 +848,15 @@
               <FilePath>..\CODE\MyCode\control.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
               <FileName>inductance.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\CODE\MyCode\inductance.c</FilePath>
+=======
+              <FileName>bluetooth.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\MyCode\bluetooth.c</FilePath>
+>>>>>>> d505da9f6599f2df4878ab522962f87b6abe5125
             </File>
           </Files>
         </Group>
