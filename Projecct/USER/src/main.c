@@ -34,6 +34,8 @@ int main(void)
     get_clk();
 
 
+	  //电感初始化
+	  Inductance_Init();
 		//电机
 		Motor_Init();
 		//舵机
@@ -56,6 +58,7 @@ int main(void)
 		gpio_init(B22,GPI, 1, PULLUP);
 		pit_init_ms(10);
     EnableInterrupts;
+		Inductance_Self_test();
     while(1)
     {
 				if(mt9v032_finish_flag)

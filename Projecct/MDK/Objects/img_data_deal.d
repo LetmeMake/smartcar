@@ -54,3 +54,5 @@
 .\objects\img_data_deal.o: ..\CODE\MyCode\Variable.h
 .\objects\img_data_deal.o: ..\CODE\MyCode\CommonFun.h
 .\objects\img_data_deal.o: ..\CODE\MyCode\control.h
+.\objects\img_data_deal.o: ..\CODE\MyCode\inductance.h
+.\objects\img_data_deal.o: ..\..\Libraries\drives\inc\headfile.h

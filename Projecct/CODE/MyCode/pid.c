@@ -5,6 +5,7 @@
 //5/4.12	转弯后会不到中线
 //5.5/4.12		
 PID_LocTypeDef ANGLE_PID = {7.5,0,0,0,0,0,0};
+PID_LocTypeDef ANGLE_PID2 = {7.5,0,0,0,0,0,0};
 
 PID_IncTypeDef MOTOR_PID_R = {80,12,15,0,0,0} ;
 PID_IncTypeDef MOTOR_PID_L = {80,12,15,0,0,0} ;

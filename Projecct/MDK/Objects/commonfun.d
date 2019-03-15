@@ -54,3 +54,5 @@
 .\objects\commonfun.o: ..\CODE\MyCode\Variable.h
 .\objects\commonfun.o: ..\CODE\MyCode\CommonFun.h
 .\objects\commonfun.o: ..\CODE\MyCode\control.h
+.\objects\commonfun.o: ..\CODE\MyCode\inductance.h
+.\objects\commonfun.o: ..\..\Libraries\drives\inc\headfile.h

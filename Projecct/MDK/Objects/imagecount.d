@@ -54,3 +54,5 @@
 .\objects\imagecount.o: ..\CODE\MyCode\Variable.h
 .\objects\imagecount.o: ..\CODE\MyCode\CommonFun.h
 .\objects\imagecount.o: ..\CODE\MyCode\control.h
+.\objects\imagecount.o: ..\CODE\MyCode\inductance.h
+.\objects\imagecount.o: ..\..\Libraries\drives\inc\headfile.h
