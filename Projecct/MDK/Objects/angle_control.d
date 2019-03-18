@@ -55,3 +55,5 @@
 .\objects\angle_control.o: ..\CODE\MyCode\CommonFun.h
 .\objects\angle_control.o: ..\CODE\MyCode\control.h
 .\objects\angle_control.o: ..\CODE\MyCode\bluetooth.h
+.\objects\angle_control.o: ..\CODE\MyCode\inductance.h
+.\objects\angle_control.o: ..\..\Libraries\drives\inc\headfile.h

@@ -16,7 +16,7 @@ void Motor_Read(void)
 	  Speed_R_New = ctimer_count_read(TIMER3_COUNT0_A4);
 		else
 		Speed_R_New =		0;
-		uart_write(adc_convert(ADC_CH0_A10,ADC_12BIT),adc_convert(ADC_CH5_A31,ADC_12BIT),0,0);
+		//uart_write(adc_convert(ADC_CH0_A10,ADC_12BIT),adc_convert(ADC_CH5_A31,ADC_12BIT),0,0);
 		//lcd_showfloat(20,1,Speed_L_New,10,0);
 		ctimer_count_clean(TIMER0_COUNT1_A2);
     ctimer_count_clean(TIMER3_COUNT0_A4);
@@ -47,7 +47,7 @@ int32_t Motor_limit(int32_t PWM_out)
 	return PWM_out;
 }
 int32_t PWM_out_R,PWM_out_L;
-int target_value=55;
+int target_value=25;
 void Motor_PID_Control()
 {
 		uint32_t backleft ,frontleft,backright,frontright;

@@ -55,3 +55,5 @@
 .\objects\bluetooth.o: ..\CODE\MyCode\CommonFun.h
 .\objects\bluetooth.o: ..\CODE\MyCode\control.h
 .\objects\bluetooth.o: ..\CODE\MyCode\bluetooth.h
+.\objects\bluetooth.o: ..\CODE\MyCode\inductance.h
+.\objects\bluetooth.o: ..\..\Libraries\drives\inc\headfile.h

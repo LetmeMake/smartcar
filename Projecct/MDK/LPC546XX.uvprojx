@@ -851,6 +851,11 @@
               <FileType>1</FileType>
               <FilePath>..\CODE\MyCode\bluetooth.c</FilePath>
             </File>
+            <File>
+              <FileName>inductance.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CODE\MyCode\inductance.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

@@ -81,5 +81,6 @@
 #include "CommonFun.h"		// 常用功能
 #include "control.h"
 #include "bluetooth.h"
+#include "inductance.h"
 
 #endif

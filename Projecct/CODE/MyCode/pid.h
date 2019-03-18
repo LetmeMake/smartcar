@@ -24,7 +24,8 @@
 	 float Ek2; 											//再前一次误差 e(k-2)
 	 float LocSum; 									 //累计积分位置
 	}PID_LocTypeDef;
-extern PID_LocTypeDef ANGLE_PID;
+extern PID_LocTypeDef ANGLE_PID1;
+extern PID_LocTypeDef ANGLE_PID2;
 extern PID_IncTypeDef MOTOR_PID_L;
 extern PID_IncTypeDef MOTOR_PID_R;
 	

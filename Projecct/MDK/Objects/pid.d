@@ -55,3 +55,5 @@
 .\objects\pid.o: ..\CODE\MyCode\CommonFun.h
 .\objects\pid.o: ..\CODE\MyCode\control.h
 .\objects\pid.o: ..\CODE\MyCode\bluetooth.h
+.\objects\pid.o: ..\CODE\MyCode\inductance.h
+.\objects\pid.o: ..\..\Libraries\drives\inc\headfile.h
